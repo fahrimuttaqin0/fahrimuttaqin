@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muhamad Fahri Muttaqin | Telecommunication Engineer &amp; AI Enthusiast</title>
+  <meta name="description" content="Portfolio of Muhamad Fahri Muttaqin: Telecommunication Engineering graduate, network &amp; systems analyst, data and AI enthusiast." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } } }
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+  <script>try{if(localStorage.getItem('theme')==='light')document.documentElement.classList.remove('dark')}catch(e){}</script>
+</head>
+<body class="bg-slate-50 text-slate-700 dark:bg-slate-900 dark:text-slate-300 font-sans antialiased">
+  <!--
+    GAMBAR: simpan di folder assets/ dengan nama persis seperti label placeholder:
+      assets/profile.jpg               -> foto profil (rasio 1:1, min 600x600)
+      assets/experience/telkom-1.jpg, telkom-2.jpg, mbc-1.jpg, mbc-2.jpg  -> foto (rasio 4:3)
+      assets/project/architecture.png  -> diagram/screenshot (rasio 16:9)
+    Selama file belum ada, kotak placeholder bergaris putus tampil otomatis. Detail: README.md
+  -->
+
+  <div id="progress" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-white/70 dark:bg-slate-900/70 border-b border-slate-200 dark:border-slate-800">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 h-16">
+      <a href="#home" class="brand" aria-label="Muhamad Fahri Muttaqin" title="Muhamad Fahri Muttaqin"><span class="brand-mono">MF</span><img src="assets/profile.jpg" alt="" onerror="this.remove()"></a>
+      <ul class="hidden md:flex items-center gap-7 text-sm font-medium">
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#projects">Project</a></li>
+        <li><a class="nav-link" href="#experience">Experience</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <div class="flex items-center gap-2">
+        <button id="lang-toggle" aria-label="Ganti bahasa / Switch language" class="icon-btn font-mono text-xs font-semibold">EN</button>
+        <button id="theme-toggle" aria-label="Toggle theme" class="icon-btn">
+          <svg class="hidden dark:block w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="dark:hidden w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button id="menu-btn" aria-label="Open menu" aria-expanded="false" class="icon-btn md:hidden">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+    <ul id="mobile-menu" class="hidden md:hidden flex-col px-5 pb-4 text-sm font-medium gap-1">
+      <li><a class="mobile-link" href="#about">About</a></li>
+      <li><a class="mobile-link" href="#skills">Skills</a></li>
+      <li><a class="mobile-link" href="#projects">Project</a></li>
+      <li><a class="mobile-link" href="#experience">Experience</a></li>
+      <li><a class="mobile-link" href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="relative min-h-screen flex items-center pt-16 overflow-hidden">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="relative max-w-6xl mx-auto px-5 py-20">
+        <p class="reveal font-mono text-sm text-cyan-600 dark:text-cyan-400 mb-4">Hello, I'm</p>
+        <h1 class="reveal text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white">Muhamad Fahri Muttaqin</h1>
+        <p class="reveal mt-5 max-w-2xl text-base sm:text-lg font-medium text-slate-600 dark:text-slate-400">
+          Telecommunication Engineering Graduate <span class="text-cyan-500">|</span> Network &amp; Systems Analyst <span class="text-cyan-500">|</span> Data &amp; AI Enthusiast
+        </p>
+        <p class="reveal mt-6 max-w-xl text-xl sm:text-2xl font-semibold gradient-text">
+          “Bridging Telecommunication Networks with Data-Driven &amp; AI Systems.”
+        </p>
+        <p class="reveal status-pill mt-8"><span class="dot"></span><span>Fresh Graduate 2026 · Terbuka untuk peluang</span></p>
+        <div class="reveal mt-6 flex flex-wrap gap-3">
+          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="#contact" class="btn-ghost">Contact Me</a>
+          <a href="assets/CV_Muhamad_Fahri_Muttaqin.pdf" download class="btn-ghost">Unduh CV</a>
+          <a href="https://www.linkedin.com/in/muhamad-fahri-muttaqin" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
+        </div>
+        <p class="reveal mt-10 text-sm text-slate-500 flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Bandung, Indonesia
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="max-w-6xl mx-auto px-5">
+        <h2 class="section-title reveal"><span>01.</span> About Me</h2>
+        <div class="grid md:grid-cols-3 gap-8 mt-8">
+          <p data-i18n="about" class="reveal from-left md:col-span-2 leading-relaxed text-base sm:text-lg">
+            Lulusan S1 Teknik Telekomunikasi <strong class="text-slate-900 dark:text-white">Telkom University</strong> (2022–2026, IPK 3.40) dengan minat pada infrastruktur jaringan, analisis sistem, serta <em>machine learning</em> dan <em>speech processing</em>. Berpengalaman memantau instalasi FTTH dan survei COMBAT di Telkom Infra, mendampingi praktikum Cyber Security &amp; Big Data di MBC Lab, serta memimpin pengawasan legislatif mahasiswa sebagai Pimpinan I DPA HMTT. Tugas akhir saya membangun sistem deteksi keterlibatan mahasiswa berbasis suara, dari verifikasi pembicara hingga klasifikasi dan deployment API.
+          </p>
+          <div class="reveal from-right space-y-4">
+            <figure class="photo-slot aspect-square w-full max-w-[16rem] mx-auto md:max-w-none" data-label="assets/profile.jpg"><img src="assets/profile.jpg" alt="Muhamad Fahri Muttaqin" loading="lazy" onerror="this.remove()"></figure>
+            <div class="grid grid-cols-2 md:grid-cols-1 gap-4">
+            <div class="card text-center"><p class="text-3xl font-bold text-cyan-500">3.40</p><p class="text-xs mt-1 text-slate-500">GPA, Telkom University</p></div>
+            <div class="card text-center"><p class="text-3xl font-bold text-indigo-400">3</p><p class="text-xs mt-1 text-slate-500">Roles: Intern, Lab Assistant, Parliamentary Leader</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section bg-white/50 dark:bg-slate-800/30">
+      <div class="max-w-6xl mx-auto px-5">
+        <h2 class="section-title reveal"><span>02.</span> Technical Skills</h2>
+        <div class="grid md:grid-cols-2 gap-6 mt-8">
+          <div class="card reveal">
+            <h3 class="card-title">Network &amp; Infra</h3>
+            <div class="badges"><span class="badge">FTTH (ODP to ONT)</span><span class="badge">Fixed Broadband Systems</span><span class="badge">KPRO</span><span class="badge">ACS</span><span class="badge">CIS</span><span class="badge">VALIN</span><span class="badge">STO Asset Audit</span><span class="badge">COMBAT Survey</span><span class="badge">Cisco Packet Tracer</span><span class="badge">Cyber Security</span><span class="badge">Troubleshooting Jaringan</span></div>
+          </div>
+          <div class="card reveal">
+            <h3 class="card-title">Programming &amp; AI</h3>
+            <div class="badges"><span class="badge">Python</span><span class="badge">Librosa</span><span class="badge">NumPy</span><span class="badge">Pandas</span><span class="badge">Scikit-learn</span><span class="badge">TensorFlow / Keras</span><span class="badge">SpeechBrain (ECAPA-TDNN)</span><span class="badge">Faster Whisper</span><span class="badge">FastAPI</span><span class="badge">MATLAB</span></div>
+          </div>
+          <div class="card reveal">
+            <h3 class="card-title">Tools &amp; Platforms</h3>
+            <div class="badges"><span class="badge">VMware</span><span class="badge">VirtualBox</span><span class="badge">Anaconda</span><span class="badge">VS Code</span><span class="badge">Linux</span><span class="badge">Git / GitHub</span><span class="badge">Microsoft Office</span></div>
+          </div>
+          <div class="card reveal">
+            <h3 class="card-title">Pelatihan &amp; Bahasa</h3>
+            <div class="badges"><span class="badge">UiPath Automation Developer Associate (2025–2026)</span><span class="badge">AWS Cloud Practitioner Essentials (2026)</span><span class="badge">Bahasa Indonesia · Native</span><span class="badge">Inggris · Dasar</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT -->
+    <section id="projects" class="section">
+      <div class="max-w-6xl mx-auto px-5">
+        <h2 class="section-title reveal"><span>03.</span> Featured Project</h2>
+        <article class="reveal zoom featured mt-8">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="tag-accent">AI &amp; Speech Processing</span>
+            <span class="tag-accent">End-to-End System</span>
+            <span class="tag-accent">Capstone</span>
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Classroom Engagement Audio Analysis System</h3>
+          <p class="mt-1 text-sm text-slate-500">Sistem Deteksi Suara untuk Analisis Keterlibatan Mahasiswa di Kelas</p>
+          <p data-i18n="projdesc" class="mt-5 leading-relaxed">Merancang dan mengimplementasikan sistem pemrosesan audio <em>end-to-end</em> untuk mengidentifikasi pembicara dan mengukur tingkat keterlibatan mahasiswa dalam sesi interaksi kelas secara otomatis.</p>
+
+          <!-- Architecture / screenshot -->
+          <figure class="photo-slot aspect-video photo-contain mt-8" data-label="assets/project/architecture.png"><img src="assets/project/architecture.png" alt="System architecture or interface" loading="lazy" onerror="this.remove()"></figure>
+
+          <!-- Pipeline -->
+          <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-3 font-mono text-xs">
+            <div class="step"><b>01 · Speaker Verification</b><br />SpeechBrain ECAPA-TDNN</div>
+            <div class="step"><b>02 · Speech-to-Text</b><br />Faster Whisper</div>
+            <div class="step"><b>03 · Classification</b><br />MLP / LSTM + keyword lexicon weighting</div>
+            <div class="step"><b>04 · Deployment</b><br />FastAPI inference backend</div>
+          </div>
+
+
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="badge">Python</span><span class="badge">Librosa</span><span class="badge">TensorFlow / Keras</span><span class="badge">FastAPI</span>
+          </div>
+          <a href="https://github.com/fahrimuttaqin0/DETEKSI-SUARA-MAHASISWA" target="_blank" rel="noopener" class="btn-ghost mt-6 inline-flex">View on GitHub →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section bg-white/50 dark:bg-slate-800/30">
+      <div class="max-w-4xl mx-auto px-5">
+        <h2 class="section-title reveal"><span>04.</span> Experience &amp; Leadership</h2>
+        <ol class="timeline mt-10">
+          <li class="reveal from-left">
+            <p class="t-date">Agu 2022 – Jul 2026</p>
+            <h3 class="t-title">S1 Teknik Telekomunikasi</h3>
+            <p class="t-org">Telkom University · Bandung · IPK 3.40/4.0</p>
+            <ul class="t-list">
+              <li>Tugas akhir: “Audio-Based Student Engagement Detection System”, sistem deteksi suara dan analisis deep learning untuk menilai keterlibatan mahasiswa di kelas.</li>
+            </ul>
+          </li>
+          <li class="reveal from-left">
+            <p class="t-date">Jun 2025 – Agu 2025</p>
+            <h3 class="t-title">Magang Teknik Jaringan &amp; Infrastruktur</h3>
+            <p class="t-org">PT Telkom Infrastruktur Indonesia (Telkom Infra) · Bandung</p>
+            <ul class="t-list">
+              <li>Memantau operasional lapangan: instalasi FTTH baru (ODP hingga ONT), perbaikan kabel optik udara, dan survei lokasi menara seluler sementara (COMBAT).</li>
+              <li>Membantu Acceptance Testing infrastruktur jaringan regional dan melakukan audit inventaris aset di fasilitas Sentral Telepon Otomat (STO).</li>
+              <li>Menggunakan sistem operasional Fixed Broadband (KPRO, ACS, CIS, VALIN) untuk pemantauan jaringan, serta mendukung perawatan rutin perangkat catu daya cadangan (genset, rectifier, baterai).</li>
+              <li>Merancang flowchart proyek dan mockup database untuk tracking tool internal (SITRACK), dan menyerahkan laporan teknis akhir kepada manajer divisi.</li>
+            </ul>
+            <div class="grid grid-cols-2 gap-3 mt-4 max-w-md">
+              <figure class="photo-slot aspect-[4/3] " data-label="assets/experience/telkom-1.jpg"><img src="assets/experience/telkom-1.jpg" alt="Telkom Infra field work 1" loading="lazy" onerror="this.remove()"></figure>
+              <figure class="photo-slot aspect-[4/3] " data-label="assets/experience/telkom-2.jpg"><img src="assets/experience/telkom-2.jpg" alt="Telkom Infra field work 2" loading="lazy" onerror="this.remove()"></figure>
+            </div>
+          </li>
+          <li class="reveal from-left">
+            <p class="t-date">Mei 2025 – Mar 2026</p>
+            <h3 class="t-title">Asisten Praktikum, Divisi Manajemen Praktikum</h3>
+            <p class="t-org">Multimedia, Big Data and Cyber Security (MBC) Laboratory · Telkom University</p>
+            <ul class="t-list">
+              <li>Memfasilitasi sesi praktikum Cyber Security dan Big Data untuk mahasiswa S1.</li>
+              <li>Membimbing mahasiswa dalam latihan teknis: setup lingkungan virtual machine, manajemen database, dan troubleshooting jaringan.</li>
+              <li>Mengelola operasional harian laboratorium, penjadwalan shift asisten, dan pemeliharaan infrastruktur teknis.</li>
+            </ul>
+            <div class="grid grid-cols-2 gap-3 mt-4 max-w-md">
+              <figure class="photo-slot aspect-[4/3] " data-label="assets/experience/mbc-1.jpg"><img src="assets/experience/mbc-1.jpg" alt="MBC Laboratory 1" loading="lazy" onerror="this.remove()"></figure>
+              <figure class="photo-slot aspect-[4/3] " data-label="assets/experience/mbc-2.jpg"><img src="assets/experience/mbc-2.jpg" alt="MBC Laboratory 2" loading="lazy" onerror="this.remove()"></figure>
+            </div>
+          </li>
+          <li class="reveal from-left">
+            <p class="t-date">Jun 2025 – Mar 2026</p>
+            <h3 class="t-title">Pimpinan I (Pimsat)</h3>
+            <p class="t-org">Dewan Perwakilan Anggota (DPA) HMTT · Telkom University</p>
+            <ul class="t-list">
+              <li>Memimpin pengawasan parlementer terhadap Komisi I, II, dan III.</li>
+              <li>Mengorkestrasi amandemen AD/ART HMTT, berhasil mengeksekusi pembaruan konstitusi organisasi setelah tertunda lebih dari 2 tahun.</li>
+              <li>Mengawasi operasional badan eksekutif, alokasi anggaran, dan indikator kinerja lintas divisi.</li>
+            </ul>
+          </li>
+          <li class="reveal from-left">
+            <p class="t-date">Sep 2024 – Jun 2025</p>
+            <h3 class="t-title">Staf Dewan, DPA</h3>
+            <p class="t-org">HMTT · Telkom University</p>
+            <ul class="t-list">
+              <li>Mengaudit program kerja badan eksekutif dan merangkum masukan mahasiswa menjadi laporan evaluasi triwulanan.</li>
+            </ul>
+          </li>
+          <li class="reveal from-left">
+            <p class="t-date">2023 – 2025</p>
+            <h3 class="t-title">Kepanitiaan</h3>
+            <p class="t-org">GATRAK 2023 · Asterisk Event HMTT</p>
+            <ul class="t-list">
+              <li>Humas & Liaison Officer GATRAK 2023: mengelola komunikasi, agenda, dan penghubung peserta mahasiswa baru teknik.</li>
+              <li>Koordinator Inti Divisi Konsumsi Asterisk Event HMTT: mengelola logistik katering, anggaran, dan vendor.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="max-w-3xl mx-auto px-5 text-center">
+        <h2 class="section-title justify-center reveal"><span>05.</span> Get In Touch</h2>
+        <p class="reveal mt-6 text-lg">Open to opportunities in network engineering, systems analysis, and applied AI. Let's talk.</p>
+        <div class="reveal mt-8 flex flex-wrap justify-center gap-3">
+          <a href="mailto:fahrimuttaqin0@gmail.com" class="btn-primary">Email Me</a>
+          <a href="assets/CV_Muhamad_Fahri_Muttaqin.pdf" download class="btn-ghost">Unduh CV</a>
+          <a href="https://www.linkedin.com/in/muhamad-fahri-muttaqin" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
+          <a href="https://github.com/fahrimuttaqin0" target="_blank" rel="noopener" class="btn-ghost">GitHub</a>
+        </div>
+        <p class="reveal mt-6 text-sm text-slate-500">Bandung, Indonesia</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-6 text-center text-sm text-slate-500">
+    © <span id="year"></span> Muhamad Fahri Muttaqin. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
